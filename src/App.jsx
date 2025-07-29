@@ -12,9 +12,27 @@ function App() {
         setActors(actorData)
     })
   }, [])
-  
+
   return (
-    <></>
+    <>
+      <div className="container">
+        <ul>
+          {actors.map((actor, index) => {
+            return (
+              <SingleCard
+                key={index}
+                name={actor.name}
+                birth_year={actor.birth_year}
+                nationality={actor.nationality}
+                image={actor.image}
+                biography={actor.biography}
+                awards={actor.awards}
+              />
+            )
+          })}
+        </ul>
+      </div>
+    </>
   )
 }
 
