@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6; 
+  color: #333; 
+  background-color:#e8f5e9; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+}
+
+ul, ol, li {
+  list-style: none; 
+  padding: 0; 
+}
+
+
+.container{
+    width: 70%;
+    margin: 0 auto;
+    
+}
+ul{
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 2rem; 
+    padding: 2rem; 
+}
+
+.cardContainer{
+    border: 3px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #f9f3e6;
+}
+
+img{
+    height: 400px;
+    object-fit:cover;
+    width: 100%;
+    border-bottom: 5px solid black;
+}
+
+.dataContainer , .biography{
+    padding: 1rem;
+    text-align: center;
+    color: #5a4e4d;
+}
+
+.awards{
+  color: goldenrod;
+}
+
+@media (min-width: 1200px) {
+    ul {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (max-width: 1199px) and (min-width: 768px) {
+    ul {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 767px) and (min-width: 480px) {
+    ul {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 479px) {
+    ul {
+      grid-template-columns: 1fr;
+    }
+  }
